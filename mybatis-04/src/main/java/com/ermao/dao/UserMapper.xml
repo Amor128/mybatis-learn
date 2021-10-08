@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ermao.dao.UserMapper">
+    <select id="getUserList" resultType="user">
+        select * from mybatis.user
+    </select>
+
+    <resultMap id="UserMap" type="user">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <select id="getByID" parameterType="_int" resultMap="UserMap">
+        select * from mybatis.user where id = #{id}
+    </select>
+
+    <select id="getUserByLimit" parameterType="map" resultMap="UserMap">
+        select * from mybatis.user limit #{startIndex}, #{pageSize}
+    </select>
+
+    <select id="getUserByRowBounds" resultMap="UserMap">
+        select * from mybatis.user
+    </select>
+
+</mapper>
