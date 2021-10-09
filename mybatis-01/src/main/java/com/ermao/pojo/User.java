@@ -1,6 +1,7 @@
 package com.ermao.pojo;
 
 /**
+ * 用户实体类
  * @author Ermao
  * Date: 2021/7/17 9:32
  */

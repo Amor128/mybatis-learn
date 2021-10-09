@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 用户映射器
  * @author Ermao
  * Date: 2021/7/17 9:34
  */
