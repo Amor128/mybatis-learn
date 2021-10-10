@@ -1,16 +1,21 @@
-<?xml version="1.0" encoding="UTF8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 <!--    引入外部配置文件-->
     <properties resource="db.properties">
-
+        <!--        下面的配置会覆盖 db.properties 配置文件中对 url 的赋值-->
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis?&amp;useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
     </properties>
 
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
     <typeAliases>
-<!--        <typeAlias type="com.ermao.pojo.User" alias="User"/>-->
-        <package name="com.ermao.pojo"/>
+        <!--        下面的配置会覆盖 db.properties 配置文件中对 url 的赋值-->
+        <typeAlias type="com.ermao.pojo.User" alias="myUser"/>
     </typeAliases>
 
     <environments default="development">
@@ -24,8 +29,8 @@
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <mapper resource="com/ermao/dao/UserMapper.xml"/>
     </mappers>
-
 </configuration>
