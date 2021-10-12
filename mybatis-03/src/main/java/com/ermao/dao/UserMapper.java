@@ -13,4 +13,10 @@ public interface UserMapper {
 	List<User> getUserList();
 
 	User getByID(int id);
+
+	List<User> getUserByLimit(Map<String, Object> map);
+
+	List<User> getUserByRowBounds();
+
+
 }

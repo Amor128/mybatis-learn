@@ -8,8 +8,11 @@
 
     </properties>
 
+    <settings>
+        <setting name="logImpl" value="NO_LOGGING"/>
+    </settings>
+
     <typeAliases>
-<!--        <typeAlias type="com.ermao.pojo.User" alias="User"/>-->
         <package name="com.ermao.pojo"/>
     </typeAliases>
 
@@ -25,7 +28,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/ermao/dao/UserMapper.xml"/>
+        <package name="com/ermao/dao"/>
     </mappers>
 
 </configuration>

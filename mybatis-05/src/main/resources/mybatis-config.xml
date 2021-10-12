@@ -9,7 +9,9 @@
     </properties>
 
     <settings>
-        <setting name="logImpl" value="NO_LOGGING"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="cacheEnabled" value="true"/>
     </settings>
 
     <typeAliases>
