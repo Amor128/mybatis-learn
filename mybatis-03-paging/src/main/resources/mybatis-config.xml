@@ -27,8 +27,10 @@
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <package name="com/ermao/dao"/>
     </mappers>
+
 
 </configuration>
